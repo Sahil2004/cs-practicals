@@ -2,12 +2,12 @@
 
 using namespace std;
 
-void display(int* arr) {
+void display(int* arr, int size) {
     cout << "Array: ";
-    for (int i = 0; i < sizeof(arr) - 1; i++) {
+    for (int i = 0; i < size - 1; i++) {
         cout << arr[i] << ", ";
     }
-    cout << arr[sizeof(arr) - 1];
+    cout << arr[size - 1];
     cout << endl;
 }
 
@@ -54,7 +54,7 @@ int main() {
         int choice = menu();
         switch (choice) {
             case 1:
-                display(arr);
+                display(arr, size);
                 break;
             case 2:
                 arr = selectionSort(arr, size);
