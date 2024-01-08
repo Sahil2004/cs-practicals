@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+class B {
+public:
+    virtual void s() = 0;
+};
+
+class D: public B {
+public:
+    void s() {
+        cout << "Virtual Function in Derived class\n";
+    }
+};
+
+int main() {
+    B *b;
+    D dobj;
+    b = &dobj;
+    b->s();
+    return 0;
+}
