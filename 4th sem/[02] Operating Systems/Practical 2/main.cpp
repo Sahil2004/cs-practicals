@@ -1,4 +1,5 @@
 #include <iostream>
+#include <thread>
 
 using namespace std;
 
@@ -19,13 +20,18 @@ public:
         lastFilledIdx = 0;
     }
 
-    void input(int elem) {
+    void inputWorker(int elem) {
+        cout << "inputWorker running" << endl;
         if (lastFilledIdx < size) {
             arr[lastFilledIdx] = elem;
             lastFilledIdx++;
         } else {
             cout << "Array Overflow." << endl;
         }
+    }
+    void input(int elem) {
+        thread thr(&ArraySite::inputWorker, std::ref(*this), elem);
+        thr.join();
     }
 
     void displaySite() {
@@ -43,7 +49,8 @@ public:
     LinkedListSite() {
         start = NULL;
     }
-    void add(int data) {
+    void addWorker(int data) {
+        cout << "addWorker running" << endl;
         Node *newNode = new Node;
         newNode->data = data;
         newNode->next = NULL;
@@ -55,6 +62,10 @@ public:
             curr->next = newNode;
             curr = newNode;
         }
+    }
+    void add(int data) {
+        thread thr2(&LinkedListSite::addWorker, std::ref(*this), data);
+        thr2.join();
     }
     void displaySite() {
         Node *temp = start;
@@ -74,7 +85,8 @@ public:
         front = NULL;
         rear = NULL;
     }
-    void enqueue(int data) {
+    void enqueueWorker(int data) {
+        cout << "enqueueWorker running" << endl;
         Node *newNode = new Node;
         newNode->data = data;
         newNode->next = NULL;
@@ -85,6 +97,10 @@ public:
             rear->next = newNode;
             rear = newNode;
         }
+    }
+    void enqueue(int data) {
+        thread thr3(&QueueSite::enqueueWorker, std::ref(*this), data);
+        thr3.join();
     }
     void dequeue() {
         if (front == NULL) {
@@ -117,9 +133,9 @@ int main() {
         int elem;
         cout << "Enter element " << i + 1 << ": ";
         cin >> elem;
-        if (i < 200) arrSite.input(elem);
-        if (i < 1000 && i >= 200) llSite.add(elem);
-        if (i >= 1000) qSite.enqueue(elem);
+        if (elem < 200) arrSite.input(elem);
+        if (elem < 1000 && elem >= 200) llSite.add(elem);
+        if (elem >= 1000) qSite.enqueue(elem);
     }
 
     cout << "Array Site: ";
