@@ -1,0 +1,36 @@
+<xs:schema>
+    <xs:complexType name="branchType">
+        <xs:element name="branch_name" type="xs:string" />
+        <xs:element name="branch_city" type="xs:string" />
+        <xs:element name="assets" type="xs:decimal" />
+    </xs:complexType>
+    <xs:complexType name="customerType">
+        <xs:element name="customer_name" type="xs:string" />
+        <xs:element name="customer_street" type="xs:string" />
+        <xs:element name="customer_city" type="xs:string" />
+    </xs:complexType>
+    <xs:complexType name="accountType">
+        <xs:element name="account_number" type="xs:integer" />
+        <xs:element name="branch_name" type="xs:string" />
+        <xs:element name="balance" type="xs:decimal" />
+    </xs:complexType>
+    <xs:complexType name="loanType">
+        <xs:element name="loan_number" type="xs:integer" />
+        <xs:element name="branch_name" type="xs:string" />
+        <xs:element name="amount" type="xs:decimal" />
+    </xs:complexType>
+    <xs:complexType name="depositorType">
+        <xs:element name="customer_name" type="xs:string" />
+        <xs:element name="account_number" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="borrowerType">
+        <xs:element name="customer_name" type="xs:string" />
+        <xs:element name="loan_number" type="xs:integer" />
+    </xs:complexType>
+    <xs:element name="branch" type="branchType" />
+    <xs:element name="customer" type="customerType" />
+    <xs:element name="account" type="accountType" />
+    <xs:element name="loan" type="loanType" />
+    <xs:element name="depositor" type="depositorType" />
+    <xs:element name="borrower" type="borrowerType" />
+</xs:schema>

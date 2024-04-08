@@ -1,0 +1,92 @@
+<xs:schema>
+    <xs:complexType name="advisorType">
+        <xs:element name="s_ID" type="xs:integer" />
+        <xs:element name="i_ID" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="classroomType">
+        <xs:element name="building" type="xs:string" />
+        <xs:element name="room_number" type="xs:integer" />
+        <xs:element name="capacity" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="courseType">
+        <xs:element name="course_id" type="xs:integer" />
+        <xs:element name="title" type="xs:string" />
+        <xs:element name="dept_name" type="xs:string" />
+        <xs:element name="credits" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="departmentType">
+        <xs:element name="dept_name" type="xs:string" />
+        <xs:element name="building" type="xs:string" />
+        <xs:element name="budget" type="xs:decimal" />
+    </xs:complexType>
+    <xs:complexType name="instructorType">
+        <xs:element name="ID" type="xs:integer" />
+        <xs:element name="name" type="xs:string" />
+        <xs:element name="dept_name" type="xs:string" />
+        <xs:element name="salary" type="xs:decimal" />
+    </xs:complexType>
+    <xs:complexType name="indefiniteType">
+        <xs:element name="ID" type="xs:integer" />
+        <xs:element name="name" type="xs:string" />
+        <xs:element name="marks" type="xs:integer" />
+    </s:complexType>
+    <xs:complexType name="prereqType">
+        <xs:element name="course_id" type="xs:integer" />
+        <xs:element name="prereq_id" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="sectionType">
+        <xs:element name="course_id" type="xs:integer" />
+        <xs:element name="sec_id" type="xs:integer" />
+        <xs:element name="semester" type="xs:string" />
+        <xs:element name="year" type="xs:integer" />
+        <xs:element name="building" type="xs:string" />
+        <xs:element name="room_number" type="xs:integer" />
+        <xs:element name="time_slot_id" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="studentType">
+        <xs:element name="ID" type="xs:integer" />
+        <xs:element name="name" type="xs:string" />
+        <xs:element name="dept_name" type="xs:string" />
+        <xs:element name="tot_cred" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="takesType">
+        <xs:element name="ID" type="xs:integer" />
+        <xs:element name="course_id" type="xs:integer" />
+        <xs:element name="sec_id" type="xs:integer" />
+        <xs:element name="semester" type="xs:string" />
+        <xs:element name="year" type="xs:integer" />
+        <xs:element name="grade" type="xs:string" />
+    </xs:complexType>
+    <xs:complexType name="teachesType">
+        <xs:element name="ID" type="xs:integer" />
+        <xs:element name="course_id" type="xs:integer" />
+        <xs:element name="sec_id" type="xs:integer" />
+        <xs:element name="semester" type="xs:string" />
+        <xs:element name="year" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="testType">
+        <xs:element name="ID" type="xs:integer" />
+        <xs:element name="name" type="xs:string" />
+    </xs:complexType>
+    <xs:complexType name="timeSlotType">
+        <xs:element name="time_slot_id" type="xs:integer" />
+        <xs:element name="day" type="xs:string" />
+        <xs:element name="start_hr" type="xs:integer" />
+        <xs:element name="start_min" type="xs:integer" />
+        <xs:element name="end_hr" type="xs:integer" />
+        <xs:element name="end_min" type="xs:integer" />
+    </xs:complexType>
+    <xs:element name="advisor" type="advisorType" />
+    <xs:element name="classroom" type="classroomType" />
+    <xs:element name="course" type="courseType" />
+    <xs:element name="department" type="departmentType" />
+    <xs:element name="instructor" type="instructorType" />
+    <xs:element name="indefinite" type="indefiniteType" />
+    <xs:element name="prereq" type="prereqType" />
+    <xs:element name="section" type="sectionType" />
+    <xs:element name="student" type="studentType" />
+    <xs:element name="takes" type="takesType" />
+    <xs:element name="teaches" type="teachesType" />
+    <xs:element name="test" type="testType" />
+    <xs:element name="time_slot" type="timeSlotType" />
+</xs:schema>
