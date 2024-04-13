@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>User Registration Form</title>
+	</head>
+	<body>
+		<h2>User Registration Form</h2>
+		<form action="submit_user.php" method="POST">
+			<label for="username">Username (roll number if student):</label
+			><br />
+			<input
+				type="text"
+				id="username"
+				name="username"
+				required
+			/><br /><br />
+
+			<label for="password">Password:</label><br />
+			<input
+				type="password"
+				id="password"
+				name="password"
+				required
+			/><br /><br />
+
+			<label for="role">Role:</label><br />
+			<select id="role" name="role" required>
+				<option value="student">Student</option>
+				<option value="faculty">Faculty</option>
+				<option value="cells">Cells</option>
+				<option value="admin">Admin</option>
+			</select>
+			<br /><br />
+
+			<label for="department">Department:</label>
+			<br />
+			<select id="role" name="role">
+				<option value="cse">CSE</option>
+				<option value="ece">ECE</option>
+				<option value="mechanical">Mechanical</option>
+				<option value="civil">Civil</option>
+				<option value="science">Applied Sciences</option>
+				<option value="cells">Cells</option>
+			</select>
+
+			<input type="submit" value="Register" />
+		</form>
+	</body>
+</html>

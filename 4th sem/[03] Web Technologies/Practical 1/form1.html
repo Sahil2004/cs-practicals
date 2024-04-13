@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grievance Form</title>
+	</head>
+	<body>
+		<h2>Grievance Form</h2>
+		<form action="submit_grievance.php" method="POST">
+			<label for="roll_no">Roll Number:</label><br />
+			<input
+				type="text"
+				id="roll_no"
+				name="roll_no"
+				required
+			/><br /><br />
+
+			<label for="subject">Subject:</label><br />
+			<input
+				type="text"
+				id="subject"
+				name="subject"
+				required
+			/><br /><br />
+
+			<label for="description">Description:</label><br />
+			<textarea
+				id="description"
+				name="description"
+				rows="4"
+				required
+			></textarea
+			><br /><br />
+
+			<label for="grievance_type">Grievance Type:</label><br />
+			<select name="grievance_type" id="grievance_type">
+				<option value="miscellaneous">Miscellaneous</option>
+				<option value="academics">Academics</option>
+				<option value="admin">Admin Department</option>
+				<option value="online">Online</option>
+				<option value="exams-result">Examination and Result</option>
+				<option value="canteen">Canteen</option>
+				<option value="sports">Sports</option>
+				<option value="infrastructure">Infrastructure</option>
+				<option value="ragging">Ragging</option>
+			</select>
+			<br /><br />
+
+			<label for="attachments">Attach any file:</label>
+			<br />
+			<input type="file" name="attachments" id="attachments" />
+			<br /><br />
+
+			<input type="submit" value="Submit" />
+		</form>
+	</body>
+</html>
