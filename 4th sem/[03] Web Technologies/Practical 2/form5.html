@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grievance Type Updation Form</title>
+	</head>
+	<body>
+		<h2>Grievance Type Updation form:</h2>
+		<h3>Grievance Type List:</h3>
+		<ol>
+			<li>Miscellaneous</li>
+			<li>Academics</li>
+			<li>Admin Department</li>
+			<li>Online</li>
+			<li>Examination and Result</li>
+			<li>Canteen</li>
+			<li>Sports</li>
+			<li>Infrastructure</li>
+			<li>Ragging</li>
+		</ol>
+		<h3>Add a Grievance type:</h3>
+		<form action="submit_grievance_type.php" method="POST">
+			<label for="name">Grievance Type Name:</label><br />
+			<input type="text" id="name" name="name" required /><br /><br />
+
+			<input type="submit" value="Add" />
+		</form>
+		<h3>Rename a Grievance Type:</h3>
+		<form action="submit_grievance_type.php" method="POST">
+			<label for="old_name">Old Grievance Type Name:</label><br />
+			<input
+				type="text"
+				id="old_name"
+				name="old_name"
+				required
+			/><br /><br />
+
+			<label for="new_name">New Grievance Type Name:</label><br />
+			<input
+				type="text"
+				id="new_name"
+				name="new_name"
+				required
+			/><br /><br />
+
+			<input type="submit" value="Rename" />
+		</form>
+	</body>
+</html>

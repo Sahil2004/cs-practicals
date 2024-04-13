@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grievance Comment Form</title>
+	</head>
+	<body>
+		<h2>Grievance Comments:</h2>
+		<form action="submit_grievance_comment.php" method="POST">
+			<label for="gid">Grievance Id:</label><br />
+			<input type="number" id="gid" name="gid" required /><br /><br />
+
+			<label for="comment">Grievance Comment:</label><br />
+			<textarea
+				type="text"
+				id="comment"
+				name="comment"
+				required
+			></textarea>
+			<br /><br />
+
+			<input type="submit" value="Add Comment" />
+		</form>
+	</body>
+</html>
