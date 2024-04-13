@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>User Registration Form</title>
+	</head>
+	<body>
+		<h2>Department Updation form:</h2>
+		<h3>Department List:</h3>
+		<ol>
+			<li>CSE</li>
+			<li>ECE</li>
+			<li>Mechanical</li>
+			<li>Civil</li>
+			<li>Applied Sciences</li>
+			<li>Cells</li>
+		</ol>
+		<h3>Add a department:</h3>
+		<form action="submit_department.php" method="POST">
+			<label for="name">Department Name:</label><br />
+			<input type="text" id="name" name="name" required /><br /><br />
+
+			<input type="submit" value="Add" />
+		</form>
+		<h3>Rename a department:</h3>
+		<form action="submit_department.php" method="POST">
+			<label for="old_name">Old Department Name:</label><br />
+			<input
+				type="text"
+				id="old_name"
+				name="old_name"
+				required
+			/><br /><br />
+
+			<label for="new_name">New Department Name:</label><br />
+			<input
+				type="text"
+				id="new_name"
+				name="new_name"
+				required
+			/><br /><br />
+
+			<input type="submit" value="Rename" />
+		</form>
+	</body>
+</html>
