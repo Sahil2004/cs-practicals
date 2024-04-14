@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grievance Comment Form</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 20px;
+				background-color: #f4f4f4;
+			}
+			h2 {
+				color: #333;
+				text-align: center;
+			}
+			form {
+				background-color: #fff;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				max-width: 500px;
+				margin: 0 auto;
+			}
+			label {
+				display: block;
+				margin-bottom: 5px;
+				color: #555;
+			}
+			input[type="number"],
+			textarea,
+			input[type="submit"] {
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 10px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				box-sizing: border-box;
+			}
+			textarea {
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Grievance Comments:</h2>
+		<form action="submit_grievance_comment.php" method="POST">
+			<label for="gid">Grievance Id:</label><br />
+			<input type="number" id="gid" name="gid" required /><br /><br />
+
+			<label for="comment">Grievance Comment:</label><br />
+			<textarea
+				type="text"
+				id="comment"
+				name="comment"
+				required
+			></textarea
+			><br /><br />
+
+			<input type="submit" value="Add Comment" />
+		</form>
+	</body>
+</html>
