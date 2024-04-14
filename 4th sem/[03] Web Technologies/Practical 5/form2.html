@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>User Registration Form</title>
+		<script src="form2.js"></script>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 20px;
+				background-color: #f4f4f4;
+			}
+			h2 {
+				color: #333;
+				text-align: center;
+			}
+			form {
+				background-color: #fff;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				max-width: 500px;
+				margin: 0 auto;
+			}
+			label {
+				display: block;
+				margin-bottom: 5px;
+				color: #555;
+			}
+			input[type="text"],
+			input[type="password"],
+			select {
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 10px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				box-sizing: border-box;
+			}
+			input[type="submit"] {
+				background-color: #007bff;
+				color: #fff;
+				border: none;
+				padding: 10px 20px;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+			input[type="submit"]:hover {
+				background-color: #0056b3;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>User Registration Form</h2>
+		<form
+			action="submit_user.php"
+			method="POST"
+			onsubmit="return validateUserRegistrationForm()"
+		>
+			<label for="username">Username (roll number if student):</label
+			><br />
+			<input type="text" id="username" name="username" /><br /><br />
+
+			<label for="password">Password:</label><br />
+			<input
+				type="password"
+				id="password"
+				name="password"
+				required
+			/><br /><br />
+
+			<label for="role">Role:</label><br />
+			<select id="role" name="role" required>
+				<option value="student">Student</option>
+				<option value="faculty">Faculty</option>
+				<option value="cells">Cells</option>
+				<option value="admin">Admin</option>
+			</select>
+			<br /><br />
+
+			<label for="department">Department:</label><br />
+			<select id="department" name="department">
+				<option value="cse">CSE</option>
+				<option value="ece">ECE</option>
+				<option value="mechanical">Mechanical</option>
+				<option value="civil">Civil</option>
+				<option value="science">Applied Sciences</option>
+				<option value="cells">Cells</option>
+			</select>
+			<br /><br />
+
+			<input type="submit" value="Register" />
+		</form>
+	</body>
+</html>
