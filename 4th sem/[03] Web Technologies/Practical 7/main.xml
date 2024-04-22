@@ -1,0 +1,69 @@
+<xs:schema>
+    <xs:complexType name="adminType">
+        <xs:element name="admin_id" type="xs:integer"/>
+        <xs:element name="user_id" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="departmentsType">
+        <xs:element name="dept_id" type="xs:integer" />
+        <xs:element name="dept_name" type="xs:string" />
+    </xs:complexType>
+    <xs:complexType name="facultyType">
+        <xs:element name="faculty_id" type="xs:integer"/>
+        <xs:element name="user_id" type="xs:integer"/>
+        <xs:element name="dept_id" type="xs:integer" />
+        <xs:element name="join_date" type="xs:date" />
+    </xs:complexType>
+    <xs:complexType name="grievancesType">
+        <xs:element name="grievance_id" type="xs:integer"/>
+        <xs:element name="roll_no" type="xs:string"/>
+        <xs:element name="faculty_id" type="xs:integer" />
+        <xs:element name="gtype_id" type="xs:integer"/>
+        <xs:element name="subject" type="xs:string"/>
+        <xs:element name="description" type="xs:string"/>
+        <xs:element name="opening_date" type="xs:date"/>
+        <xs:element name="resolving_date" type="xs:date"/>
+    </xs:complexType>
+    <xs:complexType name="grievance_attachmentsType">
+        <xs:element name="attachment_id" type="xs:integer"/>
+        <xs:element name="grievance_id" type="xs:integer"/>
+        <xs:element name="file_name" type="xs:string"/>
+        <xs:element name="file_path" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="grievance_commentsType">
+        <xs:element name="comment_id" type="xs:integer"/>
+        <xs:element name="grievance_id" type="xs:integer"/>
+        <xs:element name="user_id" type="xs:integer"/>
+        <xs:element name="comment_text" type="xs:string"/>
+        <xs:element name="comment_date" type="xs:date"/>
+    </xs:complexType>
+    <xs:complexType name="grievance_typeType">
+        <xs:element name="gtype_id" type="xs:integer"/>
+        <xs:element name="name" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="studentsType">
+        <xs:element name="roll_no" type="xs:integer" />
+        <xs:element name="user_id" type="xs:integer" />
+        <xs:element name="dept_id" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="usersType">
+        <xs:element name="user_id" type="xs:integer" />
+        <xs:element name="username" type="xs:string" />
+        <xs:element name="pwd" type="xs:string" />
+        <xs:element name="role" type="xs:string" />
+        <xs:element name="registration_date" type="xs:date" />
+    </xs:complexType>
+    <xs:complexType name="user_typeType">
+        <xs:element name="id" type="xs:integer" />
+        <xs:element name="role" type="xs:string" />
+    </xs:complexType>
+    <xs:element name="admin" type="adminType"/>
+    <xs:element name="departments" type="departmentsType"/>
+    <xs:element name="faculty" type="facultyType"/>
+    <xs:element name="grievances" type="grievancesType"/>
+    <xs:element name="grievance_attachments" type="grievance_attachmentsType"/>
+    <xs:element name="grievance_comments" type="grievance_commentsType"/>
+    <xs:element name="grievance_type" type="grievance_typeType"/>
+    <xs:element name="students" type="studentsType"/>
+    <xs:element name="users" type="usersType"/>
+    <xs:element name="user_type" type="user_typeType"/>
+</xs:schema>
