@@ -1,0 +1,3 @@
+
+	STORE b+c,g
+	STORE a+e,g
